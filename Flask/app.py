@@ -15,15 +15,15 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from flask_jwt_extended import create_access_token, get_jwt_identity, JWTManager, jwt_required
 
 stripe_keys = {
-    'secret_key': 'sk_test_51JbVJwAr4prWcoB9B9S0L5xv75WH7qP5aGhl7ZksGdQuzHziJ2GEWkl0xO2G1aVXyjpnY7ppSlgXrrpvMag33ygU00vfTfMoFr',
-    'publishable_key': 'pk_test_51JbVJwAr4prWcoB9HqQSb4nxM1r7uxaw7wp9xQ308od1ixzYHdGJ4wPcKdgNdPhbERetg4w5cUkDDMZrE1s6hWGp00z0u5DM81'
+    'secret_key': '',
+    'publishable_key': ''
 }
 
-stripe.api_key = stripe_keys['secret_key']
+stripe.api_key = stripe_keys['']
 
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'super-secret'
+app.config['SECRET_KEY'] = ''
 jwt = JWTManager(app)
 CORS(app)
 app.debug = True
