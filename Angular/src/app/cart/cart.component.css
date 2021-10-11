@@ -1,0 +1,11 @@
+.mat-card-image {
+width:10em;
+height:10em;
+display: inline-block;
+
+}
+.mat-card-content{
+margin-left:3em;
+display: inline-block;
+
+}

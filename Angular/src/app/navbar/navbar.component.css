@@ -1,0 +1,17 @@
+.spacer{
+  padding-left: calc(65% + 32px);
+}
+#home-anchor span{
+  text-decoration: none;
+  color:rgb(151, 27, 27);
+
+}
+.mat-toolbar.mat-primary {
+  background: #54b8d0;
+  color: #fff;
+}
+a:-webkit-any-link {
+  color: -webkit-link;
+  cursor: pointer;
+  text-decoration: none;
+}

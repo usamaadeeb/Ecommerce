@@ -1,0 +1,7 @@
+node_modules
+.vscode
+database
+database.db
+env
+__pycache__
+templates

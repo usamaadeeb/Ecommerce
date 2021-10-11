@@ -1,0 +1,33 @@
+.mat-card{
+margin-left:30%;
+width:40%;
+background-color:rgb(114 82 82 / 5%);
+color:black;
+margin-top:12em;
+
+
+}
+.mat-card-header{
+
+  display:inline;
+}
+
+
+
+
+.mat-form-field {
+  display: block;
+  position: relative;
+  text-align: CENTER;
+}
+
+
+strong{
+
+font-size: 20px;
+font-weight:500;
+}
+
+.container{
+  background-color:aquamarine;
+}

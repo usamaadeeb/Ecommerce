@@ -1,0 +1,63 @@
+
+<form
+  #LoginForm="ngForm"
+  (ngSubmit)="onformsubmit(LoginForm.value)"
+  method="post"
+>
+  <mat-card>
+    <mat-card-header>
+      <mat-card-subtitle
+        style="text-align: center; color: #000; font-size: 20px"
+        >Login Form</mat-card-subtitle
+      >
+    </mat-card-header>
+
+
+    <div class="form-group">
+      <label for="username">Username</label>
+
+      <input
+        matInput
+        type="name"
+        id="username"
+        minLength="8"
+        maxlength="15"
+        required
+        ngModel
+        name="username"
+        #username="ngModel"
+        pattern="^[a-zA-Z0-9]+([._]?[a-zA-Z0-9]+)*$"
+        placeholder="Enter Unique Username"
+        class="form-control"
+      />
+
+      <div
+        [hidden]="!username.hasError('pattern')"
+        class="alert alert-danger alert-primary"
+      >
+        <span>Use only letters, numbers, . , _</span>
+      </div>
+    </div>
+
+
+    <br />
+    <div class="form-group">
+      <label for="Password">Password</label>
+      <input
+        type="password"
+        id="password"
+        value="ngModel"
+        required
+        ngModel
+        name="password"
+        #password="ngModel"
+        class="form-control"
+      />
+    </div>
+
+    <div class="form-row">
+      <input type="submit" value="Submit" />
+    </div>
+  </mat-card>
+</form>
+<!--  [hidden]="!LoginForm.form.valid"  -->

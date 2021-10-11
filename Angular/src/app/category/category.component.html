@@ -1,0 +1,49 @@
+<!--
+{{products|json}} -->
+<div class="container">
+  <div *ngIf="!toggle; else elseblock">
+    <div *ngFor="let product of products" class="products">
+      <mat-card class="example-card">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>{{ product.title }}</mat-card-title>
+          <mat-card-subtitle></mat-card-subtitle>
+        </mat-card-header>
+        <a
+          [routerLink]="['/Specific/', product.id]"
+          routerLinkActive="active123"
+        >
+          <img
+            mat-card-image
+            bind-src="product.image"
+            alt=""
+            height="100px"
+            width="50px"
+        /></a>
+        <mat-card-content>
+          <a
+            [routerLink]="['/Category', product.category]"
+            routerLinkActive="active123"
+            >{{ product.category }}</a
+          >
+          <h3 style="margin-top: 0.5em">
+            Sold :{{ product.rating.count }} Units
+          </h3>
+
+          <h2 style="text-align: center">Price $ :{{ product.price }}</h2>
+        </mat-card-content>
+        <mat-card-actions style="background-color: #54b8d0">
+          <button
+            mat-raised-button
+            color="accent"
+            (click)="addProduct(product)"
+            class="cart-button"
+          >
+            ADD TO CART
+          </button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+  <ng-template #elseblock> <mat-spinner></mat-spinner></ng-template>
+</div>

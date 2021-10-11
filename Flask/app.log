@@ -1,0 +1,6 @@
+werkzeug - WARNING -  * Debugger is active!
+werkzeug - INFO -  * Debugger PIN: 109-680-589
+root - WARNING - This will get logged to a file
+werkzeug - INFO - 127.0.0.1 - - [08/Oct/2021 12:29:44] "POST /SignUp HTTP/1.1" 200 -
+root - WARNING - This will get logged to a file
+werkzeug - INFO - 127.0.0.1 - - [08/Oct/2021 12:29:49] "POST /SignUp HTTP/1.1" 200 -
